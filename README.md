@@ -9,8 +9,7 @@
 * 유명건(myeonggeon99)
 * 이동엽(MoveSide)
 * 이현주(alro923)
-***
+
 ## 개발
 ***
-* Unity
-***
+* Unity (C#)
