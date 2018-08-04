@@ -27,4 +27,4 @@
 * 개발하면서 개임내용 추가  
 
 ## 참고자료  
-https://programmers.co.kr/learn/courses/1 (총 4시간 2분 39초)
+* 유니티 기초 https://programmers.co.kr/learn/courses/1 (총 4시간 2분 39초)
