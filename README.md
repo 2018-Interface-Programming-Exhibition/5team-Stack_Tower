@@ -1,8 +1,6 @@
 # 5team-Stack_Tower
-***
 * 2018 인터페이스 프로그래밍 전시 5조
 ## 팀원
-***
 *  18012074 김민주 (minjuu55)
 *  18011524 김정현 (invent819)
 *  17011797 김하늬 (kimhanui)
@@ -11,8 +9,10 @@
 *  18011603 이현주 (alro923)
 
 ## 개발
-***
 * Unity (C#)  
+
+## 기획
+* 장르: 게임, '탑 쌓기'라는 고전게임에서 팀 내 개성적 요소 첨가.
 
 ## 계획
 * 7,8월 C#,Unity 공부에 열중함
@@ -27,4 +27,5 @@
 * 개발하면서 개임내용 추가  
 
 ## 참고자료  
-* 유니티 기초 https://programmers.co.kr/learn/courses/1 (총 4시간 2분 39초)
+* 유니티 기초 https://programmers.co.kr/learn/courses/1 (총 4시간 2분 39초)  
+-> Wiki - https://github.com/2018-Interface-Programming-Exhibition/5team-Stack_Tower/wiki/즐거운-유니티-C%23~
