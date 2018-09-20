@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bird
   - Ground
+  - Brid2
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,7 @@ public class Fallen : MonoBehaviour {
     int con = 0;
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Bird")
+        if (collision.gameObject.tag == "Bird"|| collision.gameObject.tag == "Bird2")
         {
             collision.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             //서로 닿았을 때 밀림 방지
