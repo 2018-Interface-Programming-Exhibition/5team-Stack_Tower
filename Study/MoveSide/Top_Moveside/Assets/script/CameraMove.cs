@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
-    public float Oj_speed = 1f;
+    public static float Oj_speed = 1f;
 	// Use this for initialization
 	void Start () {
 		

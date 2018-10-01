@@ -8,7 +8,7 @@ public class Camera : MonoBehaviour {
     public GameObject Main;
     Transform C_P;
     Transform M_P;
-    FirstCamera firstcamera = GameObject.Find("First Position Button").GetComponent<FirstCamera>();
+    FirstCamera firstcamera = GameObject.Find("First_Position_Button").GetComponent<FirstCamera>();
     // Use this for initialization
     void Start ()
     {
@@ -19,11 +19,20 @@ public class Camera : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate ()
     {
-        if (firstcamera.Ca_Sw == false)
+        if (FirstCamera.Ca_Sw == false)
         {
-            Vector3 moveCamera = new Vector3(0, speed);
-            transform.position += moveCamera * 1f * Time.deltaTime;
+
             transform.position = new Vector3(C_P.position.x, C_P.position.y, transform.position.z);
         }
+        else
+        {
+            transform.position = new Vector3(0, 0,-10);
+        }
+
+    }
+    void OnMouseUp()
+    {
+
+        
     }
 }

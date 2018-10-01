@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class FirstCamera : MonoBehaviour
 {
-    public bool Ca_Sw = false;
+    public static bool Ca_Sw = false;
     private void OnMouseUp()
     {
-        Ca_Sw = true;
+        if (Ca_Sw == true)
+        {
+            Ca_Sw = false;
+            Debug.Log("tr");
+        }
+        else
+            Ca_Sw = true;
+
     }
 
     // Use this for initialization
     void Start ()
     {
-		
-	}
+        Ca_Sw = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {
