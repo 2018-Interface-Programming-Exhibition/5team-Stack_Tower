@@ -27,7 +27,7 @@ public class Aim : MonoBehaviour {
                 GameObject.Find("GameManager").SendMessage("CreateBird");
                 GameObject.Find("AimPoint").SendMessage("X_PositionChange");
             }
-            else if ((AimPoint_x-2f)<=Aim_x&&Aim_x<= (AimPoint_x -0.5f))//Aim이 AimPoint의 안에 있으면 새를 생성하고 AimPoint의 x좌표를 바꿔준다
+            else if ((AimPoint_x - 2f)<=Aim_x&&Aim_x<= (AimPoint_x - 0.5f))//Aim이 AimPoint의 안에 있으면 새를 생성하고 AimPoint의 x좌표를 바꿔준다
             {
                 Debug.Log("Left");
                 GameObject.Find("GameManager").SendMessage("CreateL");
