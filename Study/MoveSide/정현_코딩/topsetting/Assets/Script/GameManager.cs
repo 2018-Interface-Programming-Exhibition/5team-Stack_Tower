@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
     Vector3 BarPosition;
-    GameObject Bar;
+    GameObject Bar , Aim;
     public GameObject Bird1,AimPoint;
+    Vector2 inl;
     public Transform randomT;
     public int accuracy=0;
     int flag=0;
@@ -14,8 +15,8 @@ public class GameManager : MonoBehaviour {
   {
         if (flag == 0)
         {
-            randomT.position = new Vector3(0, Bar.transform.position.y, Bar.transform.position.z);
-            Instantiate(Bird1, randomT.position, Quaternion.identity);
+            inl = new Vector3(Aim.transform.position.x, Aim.transform.position.y, Aim.transform.position.z);
+            Instantiate(Bird1, inl, Quaternion.identity);
         }
         else
         {
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour {
     void Start ()
     {
         Bar = GameObject.Find("Bar");//오브젝트 Bar
-                                 //    AimPoint = GameObject.Find("AimPoint");
+        Aim = GameObject.Find("Aim");                         //    AimPoint = GameObject.Find("AimPoint");
         Bird1 = GameObject.Find("Bird1");//오브젝트 Bird1
     }
 
