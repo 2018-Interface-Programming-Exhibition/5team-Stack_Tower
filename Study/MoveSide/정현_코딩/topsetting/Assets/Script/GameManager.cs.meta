@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 03331ba172fbb4a4fa9c8173b963b22f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Bird1: {fileID: 1387876669516702, guid: 34faf67812a582346a47974c84912b75, type: 2}
+  - AimPoint: {instanceID: 0}
+  - randomT: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

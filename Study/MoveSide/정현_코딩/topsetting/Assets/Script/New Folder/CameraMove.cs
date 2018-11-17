@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
-    public static float Oj_speed = 1f; // 카메라 이동 속도
+    public static float Oj_speed = 0.1f;
 	// Use this for initialization
 	void Start () {
 		
@@ -13,7 +13,7 @@ public class CameraMove : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        Vector3 Oj_position = new Vector3(0, Oj_speed); // 카메라 이동
+        Vector3 Oj_position = new Vector3(0, Oj_speed);
         transform.position += Oj_position * 1f * Time.deltaTime;
     }
 }
