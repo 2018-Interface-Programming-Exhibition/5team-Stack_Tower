@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
     Vector3 BarPosition;
     GameObject Bar , Aim;
-    public GameObject Bird1,AimPoint;
+    public GameObject Cloud1,AimPoint;
     Vector2 inl;
     public Transform randomT;
     public int accuracy=0;
@@ -16,7 +16,12 @@ public class GameManager : MonoBehaviour {
         if (flag == 0)
         {
             inl = new Vector3(Aim.transform.position.x, Aim.transform.position.y, Aim.transform.position.z);
-            Instantiate(Bird1, inl, Quaternion.identity);
+            Instantiate(Cloud1, inl, Quaternion.identity); // 블럭 생성
+
+            Renderer b_renderer = Aim.GetComponent<Renderer>();
+            b_renderer.material.color = new Color(b_renderer.material.color.r, b_renderer.material.color.g, b_renderer.material.color.b, 0.5f); 
+            // 구름에임 투명도 넣기
+
         }
         else
         {
@@ -29,7 +34,7 @@ public class GameManager : MonoBehaviour {
     {
         Bar = GameObject.Find("Bar");//오브젝트 Bar
         Aim = GameObject.Find("Aim");                         //    AimPoint = GameObject.Find("AimPoint");
-        Bird1 = GameObject.Find("Bird1");//오브젝트 Bird1
+        Cloud1 = GameObject.Find("Cloud1");//오브젝트 Bird1
     }
 
 	// Update is called once per frame
