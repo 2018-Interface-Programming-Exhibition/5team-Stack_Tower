@@ -4,25 +4,23 @@ using UnityEngine;
 
 public class ObstacleRun : MonoBehaviour
 {
-    public int mouseon= 0;
+    public int mouse = 0;
     public GameObject ob;//obstacle
 
-    private void OnMouseEnter()
+    /*private void OnMouseUp()
     {
-        Debug.Log("마우스가 오브젝트 위에 위치");
-        if (Input.GetMouseButtonDown(0) == true)
-        {
-            Debug.Log("클릭");
-            mouseon = 1;
-        }
-
-        if( mouseon ==1)
-        {
-            Destroy(ob);
-            mouseon = 0;// 다음번에 또 장애물 나올경우를 위함
-        }
+        Debug.Log("마우스가 오브젝트 클릭UP");
+        mouse = 1;//아무데서나 떼도 ㄱㅊ
     }
-    
+    private void OnMouseDown()
+    {
+        if (mouse == 1)
+        {
+            Debug.Log("마우스가 오브젝트 클릭뗌");
+            Destroy(ob);//뗼 때까지 못기다림
+        }
+    }*/
+
     void Start()
     {
 
@@ -31,7 +29,7 @@ public class ObstacleRun : MonoBehaviour
         transform.position = new Vector3(xPosition, yPosition, 0);
     }
 
-   
+
     void Update()
     {
         float xx = transform.position.x;
@@ -40,14 +38,27 @@ public class ObstacleRun : MonoBehaviour
         xx = xx - 0.01f;
 
         transform.position = new Vector3(xx, yy, 0); //방해하러오는 중,,
-                                                     /* if (Input.GetMouseButtonDown(0) == true )
-                                                      //Input.GetMouseButtonDown(0) 인자에 0은 왼쪽 마우스, 1은 오른쪽 마우스, 2는 휠임
-                                                      //'OnMouseDown() 함수는 모바일에서 적용되지 않는다'니 지양하도록
-                                                      //하지만 문제점?: 오브젝트 뿐만 아니라 다른 곳 클릭도 통용됨 -> OnmouseEnter()
-                                                     */
+                                                     
+        
+        mousePos = Input.mousePosition;
+        if (Input.GetMouseButtonUp(0)) //고작 클릭구현에 raycast사용함
+        {
+            if (mousePos == Input.mousePosition)
+            {
+                Ray ray = Camera.main.ScreenPointToRay(mousePos);
+                RaycastHit hit;
 
-        if (Input.GetMouseButtonDown(0) == true)
+                if (Physics.Raycast(ray, out hit, 100))
+                {
+                    Debug.Log(hit.collider.gameObject);
+                    Debug.DrawLine(ray.origin, ray.direction);
+                    //hit.collider.gameObject.GetComponent<Renderer>().enabled = false;
+                    if(hit.collider.gameObject == ob)
+                        Destroy(hit.collider.gameObject);
 
-            Debug.Log("클릭");
+                }
+            }
+        }
     }
+
 }
