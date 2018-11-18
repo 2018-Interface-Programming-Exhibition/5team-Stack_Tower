@@ -8,10 +8,11 @@ public class Camera : MonoBehaviour {
     public GameObject Main;
     Transform C_P;
     Transform M_P;
-    FirstCamera firstcamera = GameObject.Find("First_Position_Button").GetComponent<FirstCamera>();
+
     // Use this for initialization
     void Start ()
     {
+        FirstCamera firstcamera = GameObject.Find("First_Position_Button").GetComponent<FirstCamera>();
         C_P = Cameraposition.transform;
         M_P = Cameraposition.transform;
     }

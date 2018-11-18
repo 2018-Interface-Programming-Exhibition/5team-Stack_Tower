@@ -19,13 +19,14 @@ public class CubeMove: MonoBehaviour {
 
         if ( newXPosition < -4.0f )
         {
-     
             delta *=(-1);
+            Aim.onspace = false;
         }
         else if( newXPosition > 4.0f)
         {
             
             delta *= (-1);
+            Aim.onspace = false;
         }
     }
 }
