@@ -16,17 +16,24 @@ public class Camera : MonoBehaviour {
         C_P = Cameraposition.transform;
         M_P = Cameraposition.transform;
     }
-
-    // Update is called once per frame
-    void LateUpdate()
+	
+	// Update is called once per frame
+	void LateUpdate ()
     {
         if (FirstCamera.Ca_Sw == false)
         {
+
             transform.position = new Vector3(C_P.position.x, C_P.position.y, transform.position.z);
         }
         else
         {
-            transform.position = new Vector3(0, 0, -10);
+            transform.position = new Vector3(0, 0,-10);
         }
+
+    }
+    void OnMouseUp()
+    {
+
+        
     }
 }

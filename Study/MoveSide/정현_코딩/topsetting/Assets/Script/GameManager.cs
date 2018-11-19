@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour {
     public GameObject Bird1,AimPoint;
 =======
     GameObject Bar , Aim;
-    public GameObject Cloud1,AimPoint;
+    public GameObject Bird1,AimPoint;
     Vector2 inl;
 >>>>>>> fcb678371f63e8fd8d933a83ab1fde94ba267a6d
     public Transform randomT;
@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour {
             Instantiate(Bird1, randomT.position, Quaternion.identity);
 =======
             inl = new Vector3(Aim.transform.position.x, Aim.transform.position.y, Aim.transform.position.z);
+<<<<<<< HEAD
             Instantiate(Cloud1, inl, Quaternion.identity); // 블럭 생성
 
             Renderer b_renderer = Aim.GetComponent<Renderer>();
@@ -33,6 +34,9 @@ public class GameManager : MonoBehaviour {
             // 구름에임 투명도 넣기
 
 >>>>>>> fcb678371f63e8fd8d933a83ab1fde94ba267a6d
+=======
+            Instantiate(Bird1, inl, Quaternion.identity);
+>>>>>>> parent of 5a04ec4... 게임 기본틀 완성
         }
         else
         {
@@ -51,8 +55,12 @@ public class GameManager : MonoBehaviour {
 =======
         Bar = GameObject.Find("Bar");//오브젝트 Bar
         Aim = GameObject.Find("Aim");                         //    AimPoint = GameObject.Find("AimPoint");
+<<<<<<< HEAD
         Cloud1 = GameObject.Find("Cloud1");//오브젝트 Bird1
 >>>>>>> fcb678371f63e8fd8d933a83ab1fde94ba267a6d
+=======
+        Bird1 = GameObject.Find("Bird1");//오브젝트 Bird1
+>>>>>>> parent of 5a04ec4... 게임 기본틀 완성
     }
 
 	// Update is called once per frame
