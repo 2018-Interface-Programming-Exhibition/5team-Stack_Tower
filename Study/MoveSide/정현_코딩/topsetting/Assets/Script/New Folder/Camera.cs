@@ -15,6 +15,7 @@ public class Camera : MonoBehaviour {
         FirstCamera firstcamera = GameObject.Find("First_Position_Button").GetComponent<FirstCamera>();
         C_P = Cameraposition.transform;
         M_P = Cameraposition.transform;
+
     }
 
     // Update is called once per frame
