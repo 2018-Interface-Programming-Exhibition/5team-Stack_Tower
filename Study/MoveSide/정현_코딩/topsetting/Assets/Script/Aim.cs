@@ -21,11 +21,11 @@ public class Aim : MonoBehaviour {
         // Debug.Log(Aim_x);
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if ((AimPoint_x-2.3f)<=Aim_x&&Aim_x<= (AimPoint_x + 2.3f))//Aim이 AimPoint의 안에 있으면 새를 생성하고 AimPoint의 x좌표를 바꿔준다
+            
             {
                 Debug.Log("안에 있음");
                 GameObject.Find("GameManager").SendMessage("CreateBird");
-                GameObject.Find("AimPoint").SendMessage("X_PositionChange");
+  
             }
             
         }
