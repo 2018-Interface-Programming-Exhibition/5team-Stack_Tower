@@ -261,7 +261,15 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
+<<<<<<< HEAD
   orthographic size: 4.7047567
+=======
+<<<<<<< HEAD
+  orthographic size: 5.0650105
+=======
+  orthographic size: 4.8763504
+>>>>>>> fcb678371f63e8fd8d933a83ab1fde94ba267a6d
+>>>>>>> bd7d0e1edc837c48ff4e1467f998b4cb9bf97f66
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -289,8 +297,11 @@ Transform:
   m_Children:
   - {fileID: 1051691722}
   - {fileID: 991385587}
+<<<<<<< HEAD
   - {fileID: 1973042943}
   - {fileID: 1747491152}
+=======
+>>>>>>> bd7d0e1edc837c48ff4e1467f998b4cb9bf97f66
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -363,7 +374,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 991385586}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
+  m_LocalPosition: {x: -4, y: 2, z: -10}
+=======
   m_LocalPosition: {x: -4, y: 2, z: 1}
+>>>>>>> fcb678371f63e8fd8d933a83ab1fde94ba267a6d
   m_LocalScale: {x: 1.7, y: 1.7, z: 0.1}
   m_Children: []
   m_Father: {fileID: 519420032}
@@ -817,6 +832,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4222f6fc177f0a34face67c3eae1e004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  AimPoint: {fileID: 926082483}
+=======
+>>>>>>> fcb678371f63e8fd8d933a83ab1fde94ba267a6d
 --- !u!114 &1180013536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -846,7 +865,7 @@ GameObject:
   - component: {fileID: 1530991265}
   - component: {fileID: 1530991261}
   m_Layer: 0
-  m_Name: Cloud1
+  m_Name: Bird1
   m_TagString: Bird
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1074,6 +1093,7 @@ Prefab:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: df45b3c45c3ed044db1182ab0fbb7e9e, type: 2}
   m_IsPrefabAsset: 0
+<<<<<<< HEAD
 --- !u!1 &1747491150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,6 +1269,8 @@ Transform:
   m_Father: {fileID: 519420032}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> bd7d0e1edc837c48ff4e1467f998b4cb9bf97f66
 --- !u!1 &2021989040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,8 +1353,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2021989040}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
+  m_LocalPosition: {x: -0.23, y: -1.143, z: -10.17014}
+  m_LocalScale: {x: 9.876909, y: 0.361416, z: 1}
+=======
   m_LocalPosition: {x: -0.31, y: -0.89, z: -10.17014}
   m_LocalScale: {x: 5, y: 3, z: 1}
+>>>>>>> fcb678371f63e8fd8d933a83ab1fde94ba267a6d
   m_Children: []
   m_Father: {fileID: 1051691722}
   m_RootOrder: 0

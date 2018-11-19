@@ -5,7 +5,6 @@ using UnityEngine;
 public class Aim : MonoBehaviour {
     public static float Aim_x, AimPoint_x;
     public static bool onspace = false;
-    public static int cloud_cnt = 0;
         // Use this for initialization
         void Start ()
         {
@@ -22,12 +21,27 @@ public class Aim : MonoBehaviour {
         // Debug.Log(Aim_x);
         if (Input.GetKeyDown(KeyCode.Space))
         {
+<<<<<<< HEAD
+<<<<<<< HEAD
+            
+            {
+                Debug.Log("안에 있음");
+                GameObject.Find("GameManager").SendMessage("CreateBird");
+  
+=======
             if (onspace == false && FirstCamera.Ca_Sw == false)
+=======
+            if (onspace == false)
+>>>>>>> parent of 5a04ec4... 게임 기본틀 완성
             {
                 Debug.Log("안에 있음");
                 GameObject.Find("GameManager").SendMessage("CreateBird");
                 onspace = true;
+<<<<<<< HEAD
                 cloud_cnt++;
+>>>>>>> fcb678371f63e8fd8d933a83ab1fde94ba267a6d
+=======
+>>>>>>> parent of 5a04ec4... 게임 기본틀 완성
             }
         }
 
