@@ -6,7 +6,11 @@ public class AimPoint : MonoBehaviour {
     GameObject Bar;
     void X_PositionChange()
     {
+<<<<<<< HEAD
        //조준점의 x축위치를 랜덤으로 바꿈
+=======
+
+>>>>>>> fcb678371f63e8fd8d933a83ab1fde94ba267a6d
     }
 	// Use this for initialization
 	void Start () {
