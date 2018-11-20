@@ -17,7 +17,7 @@ public class CubeMove: MonoBehaviour {
         float newXPosition = transform.position.x + delta;
         transform.position = new Vector3(newXPosition, transform.position.y, 0);
 
-        if ( newXPosition < -4.0f )
+        if ( newXPosition < -1.5f )
         {
             delta *=(-1);
             Aim.onspace = false;
@@ -28,7 +28,7 @@ public class CubeMove: MonoBehaviour {
             }
              
         }
-        else if( newXPosition > 4.0f)
+        else if( newXPosition > 1.5f)
         {           
             delta *= (-1);
             Aim.onspace = false;
