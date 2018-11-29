@@ -12,19 +12,27 @@ public class Drop : MonoBehaviour {
     }
     */
     void Start () {
-        GetComponent<Rigidbody>().AddForce(Vector2.down * 0);//시작할 때 떨어지는 속도 0
+        GetComponent<Rigidbody2D>().AddForce(Vector2.down * 0);//시작할 때 떨어지는 속도 0
+        con = 2;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
 
-    }       
-   
+        if (con != 0)
+        {
+            con = 0;
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            GetComponent<Transform>().position += new Vector3(0, 0.1f, 0);
+            Debug.Log(con);
+        }
+        
+        //다시 외력작용 받게 함( 균형)
+    }
     // Cloud1에서 Use Gravity를 체크한다.
     void Update () {
-        Rigidbody myRigidbody = GetComponent<Rigidbody>();
+        Rigidbody2D myRigidbody = GetComponent<Rigidbody2D>();
         // myRigidbody.useGravity = true; //떨어지는 속도 일정  *
-        GetComponent<Rigidbody>().AddForce(Vector2.down * 100 ); //속도만 관여
-        con++;
-        if (con > 1)
-        {
-            GetComponent<Rigidbody>().AddForce(Vector2.down * -100);//떨어지는 속도가 빨라지지 않도록
-        }
+
+
 	}
 }
