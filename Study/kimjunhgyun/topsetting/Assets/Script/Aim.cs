@@ -21,13 +21,25 @@ public class Aim : MonoBehaviour {
         // Debug.Log(Aim_x);
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if ((AimPoint_x-2.3f)<=Aim_x&&Aim_x<= (AimPoint_x + 2.3f))//Aim이 AimPoint의 안에 있으면 새를 생성하고 AimPoint의 x좌표를 바꿔준다
+            if ((AimPoint_x - 0.5f) <= Aim_x && Aim_x <= (AimPoint_x + 0.5f))//Aim이 AimPoint의 안에 있으면 새를 생성하고 AimPoint의 x좌표를 바꿔준다
             {
-                Debug.Log("안에 있음");
+                Debug.Log("Perfect");
                 GameObject.Find("GameManager").SendMessage("CreateBird");
                 GameObject.Find("AimPoint").SendMessage("X_PositionChange");
             }
-            
+            else if ((AimPoint_x - 2f)<=Aim_x&&Aim_x<= (AimPoint_x - 0.5f))//Aim이 AimPoint의 안에 있으면 새를 생성하고 AimPoint의 x좌표를 바꿔준다
+            {
+                Debug.Log("Left");
+                GameObject.Find("GameManager").SendMessage("CreateL");
+                GameObject.Find("AimPoint").SendMessage("X_PositionChange");
+            }
+            else if ((AimPoint_x + 0.5f) <= Aim_x && Aim_x <= (AimPoint_x + 2f))//Aim이 AimPoint의 안에 있으면 새를 생성하고 AimPoint의 x좌표를 바꿔준다
+            {
+                Debug.Log("Right");
+                GameObject.Find("GameManager").SendMessage("CreateR");
+                GameObject.Find("AimPoint").SendMessage("X_PositionChange");
+            }
+
         }
 
     }

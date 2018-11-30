@@ -1,0 +1,53 @@
+1.GameManager
+
+스크립트 Aim에서 SendMessage를 받아 새가 생성된다.
+
+생성위치는 3가지로 나뉘며
+
+첫 번째 전에 떨어진 곳에 똑같이 떨어진다.
+
+두 번째 전에 떨어진 곳에 x 좌표 -0.5 만큼 이동하여 떨어진다.
+
+세 번째 전에 떨어진 곳에 x 좌표 +0.5 만큼 이동하여 떨어진다.
+
+
+
+
+
+2.Aim
+
+스페이스바를 누를 때 Aim이 게임오브젝트 AimPoint의 안에 있는 위치에 따라서
+
+GameManager에 보내는 SendMessage가 달라진다. 그리고 스크립트 AimPoint에 SendMessage를 X_PositionChange 보낸다
+
+AimPoint안에 Aim이 완전히 들어가면 SendMessage를 CreateBird 보낸다.
+
+AimPoint 왼쪽에 걸치면 SendMessage를 CreateL 보낸다.
+
+AimPoint 오른쪽에 걸치면 SendMessage를 CreateR 보낸다.
+
+
+
+
+
+3.AimPoint
+Aim에 SendMessage를 받으면 AimPoint의 x좌표를 랜덤으로 바꿔준다.
+
+
+
+
+
+4.CubeMove
+x좌표를 좌우로 이동하게 한다.
+
+
+
+
+5.Drop
+오브젝트를 떨어뜨린다.
+
+
+
+
+6.Fallen
+오브젝트가 떨어지면 외력을 받지 않게한다.
