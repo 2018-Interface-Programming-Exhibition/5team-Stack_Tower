@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
     Vector3 BarPosition;
     GameObject Bar , Aim;
@@ -10,7 +11,8 @@ public class GameManager : MonoBehaviour {
     public Transform randomT;
     public int accuracy=0;
     int flag=0;
-
+    public Text ScoreText;
+    int cloud_score = 0;
     void CreateBird()
   {
         if (flag == 0)
@@ -29,9 +31,18 @@ public class GameManager : MonoBehaviour {
         }
         //GameObject.Find("Bird1").SendMessage("Drop_on");
    }
+    void stop()//게임 끝
+    {
+        Time.timeScale = 0;
+        SceneManager.LoadScene("Score", LoadSceneMode.Additive);
+    
+       // GameObject.Find("Aim").SendMessage("stop");
+
+    }
     // Use this for initialization
     void Start ()
     {
+      
         Bar = GameObject.Find("Bar");//오브젝트 Bar
         Aim = GameObject.Find("Aim");                         //    AimPoint = GameObject.Find("AimPoint");
         Cloud1 = GameObject.Find("Cloud1");//오브젝트 Bird1
@@ -39,7 +50,13 @@ public class GameManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            cloud_score++;
+            ScoreText.text = "Score  " + cloud_score;
 
+            
+        }
 
     }
 }

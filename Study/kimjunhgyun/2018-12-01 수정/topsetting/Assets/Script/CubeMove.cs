@@ -9,7 +9,10 @@ public class CubeMove: MonoBehaviour {
 	void Start () {
         
 	}
-	
+	void stop()
+    {
+        Time.timeScale = 0;
+    }
 	// Update is called once per frame
 	void Update ()
     {

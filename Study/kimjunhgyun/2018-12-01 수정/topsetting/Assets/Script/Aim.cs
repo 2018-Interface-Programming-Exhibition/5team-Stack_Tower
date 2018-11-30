@@ -27,7 +27,7 @@ public class Aim : MonoBehaviour {
                 Debug.Log("안에 있음");
                 GameObject.Find("GameManager").SendMessage("CreateBird");
                 onspace = true;
-                cloud_cnt++;
+                
             }
         }
 
