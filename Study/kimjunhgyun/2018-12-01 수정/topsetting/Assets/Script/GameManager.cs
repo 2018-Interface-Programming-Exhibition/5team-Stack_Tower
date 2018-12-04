@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour {
     public int accuracy=0;
     int flag=0;
     public Text ScoreText;
-    int cloud_score = 0;
+    public static int cloud_score = 0;
     void CreateBird()
   {
         if (flag == 0)
