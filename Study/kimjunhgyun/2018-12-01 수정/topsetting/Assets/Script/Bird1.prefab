@@ -22,10 +22,7 @@ GameObject:
   - component: {fileID: 33515282337879564}
   - component: {fileID: 23554262578390494}
   - component: {fileID: 65797850199797930}
-  - component: {fileID: 114235973823037278}
   - component: {fileID: 54229695159592748}
-  - component: {fileID: 114798356447421876}
-  - component: {fileID: 114310614047187766}
   m_Layer: 0
   m_Name: Bird1
   m_TagString: Bird
@@ -115,37 +112,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114235973823037278
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1387876669516702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd8c86837934c6b4aac9b4af99792d23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114310614047187766
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1387876669516702}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4d25fc11123d564b9b78ba72258455a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Birds: []
---- !u!114 &114798356447421876
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1387876669516702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe790102cdf0e0542a3938dc38cf48dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

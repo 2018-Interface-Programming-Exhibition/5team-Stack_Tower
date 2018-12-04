@@ -13,24 +13,23 @@ public class GameManager : MonoBehaviour {
     int flag=0;
     public Text ScoreText;
     public static int cloud_score = 0;
+    public int i = 0;
+
     void CreateBird()
-  {
-        if (flag == 0)
-        {
-            inl = new Vector3(Aim.transform.position.x, Aim.transform.position.y, Aim.transform.position.z);
-            Instantiate(Cloud1, inl, Quaternion.identity); // 블럭 생성
+    {
 
-            Renderer b_renderer = Aim.GetComponent<Renderer>();
-            b_renderer.material.color = new Color(b_renderer.material.color.r, b_renderer.material.color.g, b_renderer.material.color.b, 0.5f); 
-            // 구름에임 투명도 넣기
+        inl = new Vector3(Aim.transform.position.x, Aim.transform.position.y, Aim.transform.position.z);
+        GameObject cloud_clone = (GameObject)Instantiate(Cloud1, inl, Quaternion.identity); // 블럭 생성
+        cloud_clone.tag = "Bird";
+        //본체는 태그 안달고 클론만 태그 달아준다.~> clone들 태그로 충돌 구별하기 위해
+        cloud_clone.name += i.ToString();//테스트용 이름달기
+        i++;
 
-        }
-        else
-        {
+        Renderer b_renderer = Aim.GetComponent<Renderer>();
+        b_renderer.material.color = new Color(b_renderer.material.color.r, b_renderer.material.color.g, b_renderer.material.color.b, 0.5f);
+        // 구름에임 투명도 넣기
 
-        }
-        //GameObject.Find("Bird1").SendMessage("Drop_on");
-   }
+    }
     void stop()//게임 끝
     {
         Time.timeScale = 0;
@@ -53,9 +52,10 @@ public class GameManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             cloud_score++;
-            ScoreText.text = "Score  " + cloud_score;
-
-            
+            ScoreText.text = cloud_score.ToString("N0");
+            //N'0'-> 숫자 0임
+            //ToString("NO") : 실수나 정수값을 문자값으로 변환해줌. 
+            // N을 써서소수점 이하값을 표현해주지 않는다.
         }
 
     }

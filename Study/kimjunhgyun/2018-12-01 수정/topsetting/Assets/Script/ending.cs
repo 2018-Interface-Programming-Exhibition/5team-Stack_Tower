@@ -6,21 +6,22 @@ public class ending : MonoBehaviour {
     int cnt = 0,flag=0,spaceFlag=0;
     public int isEnd = 0;
     GameObject Camera;
-  //  float Camera_y;
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.name=="Ground")
-        {
-            isEnd = 1;
-            Debug.Log("isEnd:" + isEnd);
-            GameObject.Find("GameManager").SendMessage("stop");
+    //  float Camera_y;
 
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+
+        if (col.gameObject.tag == "Bird")//구름클론만 태그잇음 이용
+        {
+            Debug.Log("구름 떨어짐 게임 오버");
+            isEnd = 1;
+            GameObject.Find("GameManager").SendMessage("stop");
         }
 
-
-
-
     }
+
+
     void Start () {
         Camera = GameObject.Find("Main Camera Position");
 
@@ -31,6 +32,7 @@ public class ending : MonoBehaviour {
        // Camera_y = transform.localPosition.x;
         if(!(-10<=transform.position.x&& transform.position.x<=10))//구름이 카메라 x좌표로 카메라 밖에 나갈시
         {
+            isEnd = 1;
             Debug.Log("x좌표 게임 오버");
             GameObject.Find("GameManager").SendMessage("stop");
         }
@@ -52,7 +54,8 @@ public class ending : MonoBehaviour {
         {
             if(transform.position.y+5<Camera.transform.position.y)//카메라로 볼때 구름이 안보일시
             {
-                Debug.Log("카메라 게임 오버");
+                isEnd = 1;
+                Debug.Log("구름 안보임 게임 오버");
                 GameObject.Find("GameManager").SendMessage("stop");
 
             }
