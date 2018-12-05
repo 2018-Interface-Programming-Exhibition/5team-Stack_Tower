@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour {
             Gameover = false;
             // SceneManager.LoadScene("Score", LoadSceneMode.Additive);
             stopInt = 1;
-            //ending.isEnd = 0;
+            
         }
        // GameObject.Find("Aim").SendMessage("stop");
 

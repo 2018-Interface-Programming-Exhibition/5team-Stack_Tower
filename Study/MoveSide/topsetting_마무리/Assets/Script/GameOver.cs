@@ -19,6 +19,7 @@ public class GameOver : MonoBehaviour
         {
             GameOverUI.SetActive(true);
             Time.timeScale = 0;
+            gameObject.GetComponent<pause>().enabled = false;
         }
     }
 
