@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour {
     public int i = 0;
     public int stopInt = 0;
     public static bool Gameover = true;
+
     void CreateBird()
     {
         inl = new Vector3(Aim.transform.position.x, Aim.transform.position.y, Aim.transform.position.z);
@@ -25,7 +26,13 @@ public class GameManager : MonoBehaviour {
         cloud_clone.name += i.ToString();//테스트용 이름달기
         i++;
 
-
+        if (Gameover == true)
+        {
+            cloud_score++;
+            ScoreText.text = cloud_score.ToString("N0");
+        }//N'0'-> 숫자 0임
+         //ToString("NO") : 실수나 정수값을 문자값으로 변환해줌. 
+         // N을 써서소수점 이하값을 표현해주지 않는다.
     }
     void stop()//게임 끝
     {
@@ -38,13 +45,15 @@ public class GameManager : MonoBehaviour {
             GameOvers.on = true;
             Time.timeScale = 0;
             Gameover = false;
-    // SceneManager.LoadScene("Score", LoadSceneMode.Additive);
+            // SceneManager.LoadScene("Score", LoadSceneMode.Additive);
             stopInt = 1;
-
+            //ending.isEnd = 0;
         }
        // GameObject.Find("Aim").SendMessage("stop");
 
     }
+
+    
     // Use this for initialization
     void Start ()
     {
@@ -56,7 +65,7 @@ public class GameManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space))
+        /*if (Input.GetKeyDown(KeyCode.Space))
         {
             if (Gameover == true)
             {
@@ -66,7 +75,7 @@ public class GameManager : MonoBehaviour {
             //ToString("NO") : 실수나 정수값을 문자값으로 변환해줌. 
             // N을 써서소수점 이하값을 표현해주지 않는다.
         }
-
+        */
     }
 }
 //GameObject.Find("GameManager").SendMessage("    RestartGame    ");

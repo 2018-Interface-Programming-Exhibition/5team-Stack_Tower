@@ -6,6 +6,7 @@ public class Aim : MonoBehaviour {
     public static float Aim_x, AimPoint_x;
     public static bool onspace = false;
     public static int cloud_cnt = 0;
+    //public static int falldown=0;
         // Use this for initialization
         void Start ()
         {
@@ -19,12 +20,13 @@ public class Aim : MonoBehaviour {
 
         Aim_x = transform.localPosition.x;//Aim의 x좌표를 매번 저장해준다
 
-        // Debug.Log(Aim_x);
+        
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (onspace == false && FirstCamera.Ca_Sw == false)
             {
                 Debug.Log("안에 있음");
+            
                 GameObject.Find("GameManager").SendMessage("CreateBird");
 
                 onspace = true;

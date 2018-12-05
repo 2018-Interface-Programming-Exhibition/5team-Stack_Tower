@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ending : MonoBehaviour {
     int cnt = 0,flag=0,spaceFlag=0;
-    public int isEnd = 0;
+    public static int isEnd = 0;
     GameObject Camera;
     //  float Camera_y;
 
@@ -36,11 +36,6 @@ public class ending : MonoBehaviour {
             Debug.Log("x좌표 게임 오버");
             GameObject.Find("GameManager").SendMessage("stop");
         }
-
-
-
-
-
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
